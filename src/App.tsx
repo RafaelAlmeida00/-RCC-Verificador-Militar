@@ -132,15 +132,11 @@ function App() {
   const verificarMissao = () => {
     if (!missao.startsWith("[RCC]")) {
       setMissaook(false); // Reseta o estado
-      setTipoHierarquia([]); // Reseta o estado da hierarquia
-      return; // Encerra a função
     }
 
-    const tagMatch = missao.match(/\[([A-Z0-9]{3})\]/);
+    const tagMatch = missao.match(/\[([A-Za-z0-9]{3})\]/);
     if (!tagMatch) {
       setMissaook(false); // Reseta o estado
-      setTipoHierarquia([]); // Reseta o estado da hierarquia
-      return; // Encerra a função
     }
 
     let encontrado = false;
